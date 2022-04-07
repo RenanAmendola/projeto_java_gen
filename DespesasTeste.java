@@ -13,14 +13,7 @@ Despesas Des = new Despesas(0,0,0,0,0);
 	
 String[] tipoDeMan= new String[30]; // 0 = espelho quebrado / 1 = 
 
-	
-	
-	
-	
-	
-
 do {
-
 	
 	System.out.println("\t\tMENU");
 	System.out.println();
@@ -29,12 +22,7 @@ do {
 
 	menu =leia.nextInt();
 	
-	
-	
-	
-	
 switch(menu){
-
 	
 	case 1:
 		
@@ -46,12 +34,7 @@ switch(menu){
 		System.out.print("\nOpção: ");
 		despesas = leia.nextInt();
 			
-		
-		
-			
-			
-			
-			switch(despesas) {
+		switch(despesas) {
 			
 			
 			case 1:
