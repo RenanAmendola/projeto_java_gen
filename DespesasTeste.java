@@ -56,7 +56,8 @@ switch(menu){
 			case 2:
 				
 				System.out.print("Insira o tipo de Manutenção: ");				
-				tipoDeMan[man] = leia.next();      //não pode dar espaço, quebra o codigo
+				leia.nextLine();
+				tipoDeMan[man] = leia.nextLine();      
 				man++;
 	
 				System.out.print("Insira o valor gasto: ");
@@ -96,9 +97,9 @@ switch(menu){
 				System.out.print("Insira o valor gasto com outras despesas: ");
 				c =leia.nextDouble();
 				Des.setOutrasDespesas(c);
-				
+				leia.nextLine();
 				System.out.print("Insira o nome da despesa: ");				
-				tipoDeMan[man] = leia.next();      //não pode dar espaço, quebra o codigo
+				tipoDeMan[man] = leia.nextLine();     
 				man++;
 				
 				System.out.println("\n***************************************************************");
