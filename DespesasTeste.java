@@ -7,8 +7,10 @@ public class DespesasTeste {
 
 Scanner leia = new Scanner(System.in);
 Despesas Des = new Despesas(0,0,0,0,0);
-	
-	int menu = 1, despesas = 1, man = 0;
+Ganhos gan = new Ganhos(0,0);	
+
+
+	int menu = 1, despesas = 1, man = 0, ganhos = 1;
 	double c = 0, m = 0; 
 	
 String[] tipoDeMan= new String[30]; // 0 = espelho quebrado / 1 = 
@@ -17,10 +19,13 @@ do {
 	
 	System.out.println("\t\tMENU");
 	System.out.println();
-	System.out.println("1°) DESPESAS" +"\n2°) GANHOS"+"\n3°) TAXAS DE SERVIÇOS");
+	System.out.println("1°) DESPESAS" +"\n2°) GANHOS" +"\n3°) SAIR");
 	System.out.print("\nOpção: ");
 
-	menu =leia.nextInt();
+	menu =leia.nextInt();	
+	System.out.println("\n***************************************************************");
+	System.out.println();
+	
 	
 switch(menu){
 	
@@ -104,12 +109,12 @@ switch(menu){
 			
 			
 			case 6:
-				System.out.println("\nVoltando para o menu");
+				System.out.println("\nVoltando para o menu...");
 			
 				System.out.println("\n***************************************************************");
 			
 				System.out.println();
-			
+				break;
 			
 			
 			default:
@@ -118,35 +123,80 @@ switch(menu){
 				System.out.println("\n***************************************************************");
 			
 				System.out.println();
+				break;
 			
 			
 			
 			}}while(despesas != 6);
-				
-				
-				
-			
-			
-			
-		
-	
-			
-			
+			break;
 	case 2:
-		break;
-	
-	
-	
-	
-	case 3:
-		break;
+		do {
+			
+			System.out.println("\t\tGANHOS");
+			System.out.println();
+			System.out.println("1°) Receita da corrida" +"\n2°) Gorgetas"+"\n3°) Voltar ao menu");
+			System.out.print("\nOpção: ");
+			ganhos = leia.nextInt();
+			
+			switch(ganhos) {
+			
+			case 1:
+				System.out.print("Insira o quanto você lucrou com a corrida: ");
+				c =leia.nextDouble();
+				gan.setReceita(c);
+				System.out.println(gan.getReceita());
+				System.out.println("\n***************************************************************");
+			
+				System.out.println();
+			break;
+			
+			case 2:
+				System.out.print("Insira o quanto você recebeu de gorgeta: ");
+				c =leia.nextDouble();
+				gan.setGorjeta(c);
+				System.out.println(gan.getGorjeta());
+				System.out.println("\n***************************************************************");
+				
+				System.out.println();
+				break;
+			
+			case 3:
+				System.out.println("\nVoltando para o menu...");
+				
+				System.out.println("\n***************************************************************");
+			
+				System.out.println();
+				break;
+			
+			default:
+				System.out.println("\nOpção invalido");
+				
+				System.out.println("\n***************************************************************");
+			
+				System.out.println();
+				break;
+			
+			
+			
+			}
 		
+		}while(ganhos != 3);
+		break;
+
+	default:
+		System.out.println("\nOpção invalido");
+		
+		System.out.println("\n***************************************************************");
 	
+		System.out.println();
+		break;
 	
-	
-	
-	
-	
+				
+		
+			
+		
+		
+		
 }}while(menu != 0);
 	
 	

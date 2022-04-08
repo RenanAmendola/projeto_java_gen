@@ -106,9 +106,38 @@ public String FormManutencao() {
 
 }
 
-
+public String FormLimpeza() {
+	
+	NumberFormat nf = NumberFormat.getCurrencyInstance();
+	nf.setMinimumFractionDigits(2);
+	String FormLimpeza = nf.format(Limpeza);
+	return FormLimpeza;
 
 }
 
+public String FormAlimentacao() {
+	
+	NumberFormat nf = NumberFormat.getCurrencyInstance();
+	nf.setMinimumFractionDigits(2);
+	String FormAlimentacao = nf.format(Alimentacao);
+	return FormAlimentacao;
+
+}
+
+
+public String FormOutrasDespesas() {
+	
+	NumberFormat nf = NumberFormat.getCurrencyInstance();
+	nf.setMinimumFractionDigits(2);
+	String FormOutrasDespesas = nf.format(OutrasDespesas);
+	return FormOutrasDespesas;
+
+}
+
+
+
+
+
+}
 
 
