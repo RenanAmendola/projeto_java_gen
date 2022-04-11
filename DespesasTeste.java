@@ -1,10 +1,14 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class DespesasTeste {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		
+List <Double> ManutencaoValor = new ArrayList<Double>();
+List <String> ManutencaoNome = new ArrayList<String>();
 Scanner leia = new Scanner(System.in);
 Despesas Des = new Despesas(0,0,0,0,0);
 Ganhos gan = new Ganhos(0,0);	
@@ -13,7 +17,7 @@ Ganhos gan = new Ganhos(0,0);
 	int menu = 1, despesas = 1, man = 0, ganhos = 1;
 	double c = 0, m = 0; 
 	
-String[] tipoDeMan= new String[30]; // 0 = espelho quebrado / 1 = 
+String[] tipoDeMan= new String[30]; 
 
 do {
 	
@@ -54,16 +58,18 @@ switch(menu){
 				break;
 
 			case 2:
-				
-				System.out.print("Insira o tipo de Manutenção: ");				
+				String Nome;
 				leia.nextLine();
-				tipoDeMan[man] = leia.nextLine();      
+				System.out.print("Insira o tipo de Manutenção: ");				
+				Nome = leia.nextLine();
+				ManutencaoNome.add(Nome);     
 				man++;
-	
+				
+				double valor;
 				System.out.print("Insira o valor gasto: ");
-				m =leia.nextDouble();
-				Des.setManutencao(m);
-				System.out.println(Des.getManutencao());
+				valor =leia.nextDouble();
+				Des.setManutencao(valor);
+				ManutencaoValor.add(valor);
 				System.out.println("\n***************************************************************");
 				
 				System.out.println();
@@ -117,6 +123,13 @@ switch(menu){
 				System.out.println();
 				break;
 			
+			
+			case 7:
+				System.out.println(ManutencaoValor);
+				System.out.println(ManutencaoNome);
+				
+				
+				
 			
 			default:
 				System.out.println("\nOpção invalido");
